@@ -24,7 +24,7 @@ function App() {
   const [comment, setComment] = useState("");
   const [sentiment, setSentiment] = useState<Sentiment>(0);
 
-  const debouncedComment = useDebounce(comment, 500);
+  const debouncedComment = comment
 
   useEffect(() => {
     async function fetchSentiment(comment: string) {
